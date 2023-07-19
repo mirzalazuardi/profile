@@ -1,16 +1,33 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>MirzalazuardiProfile</title>
-    <meta name="viewport" content="width=device-width,initial-scale=1">
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mirzalazuardi Hermawan</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
-  </head>
+</head>
+<body class="h-screen pt-48 flex items-center justify-center" style="background: #edf2f7;">
 
-  <body>
-    <%= yield %>
-  </body>
+<main class="profile-page">
+  <%= render "shared/cover_bg" %>
+  <section class="relative py-16 bg-blueGray-200">
+    <div class="container mx-auto px-4">
+      <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
+        <div class="px-6">
+          <%= render "shared/top" %>
+          <%= render "shared/mid" %>
+          <%= render "shared/bottom" %>
+        </div>
+      </div>
+    </div>
+    <%= render "shared/footer" %>
+  </section>
+</main>
+</body>
 </html>
+
