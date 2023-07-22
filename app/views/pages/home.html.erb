@@ -1,10 +1,15 @@
+<div data-controller="toggle" data-toggle-nocontent-class="hidden">
   <p class="mb-4 text-lg leading-relaxed text-blueGray-700">Hello there! 
   I'm Mirza, a passionate and versatile professional with over 
   6 years of experience as a Ruby on Rails Developer, complemented by 
   DevOps skills.
   </p>
+  <%= button_tag "show more",
+    class: 'inline-flex items-center font-medium text-blue-600 '\
+    'dark:text-blue-500 hover:underline',
+    data: { action: 'toggle#toggle', 'toggle-target': 'more' } %>
 
-  <div class="hidden">
+  <div data-toggle-target="description">
   <p class="mb-4 text-lg leading-relaxed text-blueGray-700">As a Ruby on Rails 
   Developer, I thrive on transforming ideas into reality. Throughout my journey,
   I have honed my craft in crafting robust web solutions that are not only 
@@ -37,3 +42,8 @@
   <p class="mb-4 text-lg leading-relaxed text-blueGray-700">Are you ready to 
   take the next step? Let's talk!</p>
   </div>
+  <%= button_tag "show less",
+    class: 'inline-flex items-center font-medium text-blue-600'\
+    ' dark:text-blue-500 hover:underline',
+    data: { action: 'toggle#toggle', 'toggle-target': 'less' } %>
+</div>
